@@ -3,56 +3,107 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Moje Portfolio</title>
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
   <style>
     body {
+      background: linear-gradient(135deg, #ff71ce 0%, #01cdfe 40%, #05ffa1 70%, #b967ff 100%);
+      padding: 0;
       margin: 0;
-      padding: 40px;
-      font-family: Arial, sans-serif;
-      background: #fdfdfd;
-      color: #222;
-      max-width: 800px;
-      line-height: 1.6;
-      margin-left: auto;
-      margin-right: auto;
+      font-family: 'Inter', sans-serif;
+      color: #222; /* keep text dark for contrast on colorful bg */
     }
-    h1 { font-size: 42px; margin-bottom: 10px; }
-    h2 { margin-top: 40px; }
-    a { color: #000; text-decoration: none; border-bottom: 1px solid #aaa; }
-    a:hover { border-bottom-color: #000; }
-    .projects { margin-top: 20px; }
-    .project { margin-bottom: 15px; }
+
+    header {
+      text-align: center;
+      padding: 120px 20px 80px;
+      background: #ffffffaa;
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid #ddd;
+    }
+
+    h1 {
+      font-size: 64px;
+      margin: 0;
+      font-weight: 700;
+      letter-spacing: -1.5px;
+      color: #fff;
+      text-shadow: 0 0 8px rgba(255,255,255,0.6);
+    }
+
+    .subtitle {
+      font-size: 20px;
+      opacity: 0.7;
+      margin-top: 10px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    .projects-grid {
+      display: grid;
+      gap: 40px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      margin-top: 40px;
+    }
+
+    .card {
+      padding: 24px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.15); backdrop-filter: blur(18px); border: 1px solid rgba(255,255,255,0.3);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 14px 30px rgba(0,0,0,0.12);
+    }
+
+    footer {
+      text-align: center;
+      padding: 60px 20px;
+      opacity: 0.7;
+    }
+
+    a {
+      text-decoration: none;
+    }
   </style>
 </head>
 <body>
 
-  <h1>Cześć, jestem [Twoje imię]</h1>
-  <p>
-    Jestem [kim jesteś / co robisz]. Tworzę [X, Y, Z].  
-    To moje minimalistyczne portfolio.
-  </p>
+<header>
+  <h1>[Twoje Imię]</h1>
+  <div class="subtitle">Projektuję, tworzę i buduję rzeczy w sieci.</div>
+</header>
 
-  <h2>Projekty</h2>
-  <div class="projects">
-    <div class="project">
-      <strong>Projekt 1</strong><br />
-      Krótki opis projektu.  
-      <a href="#">Zobacz →</a>
-    </div>
+<div class="container">
+  <h2>Wybrane projekty</h2>
 
-    <div class="project">
-      <strong>Projekt 2</strong><br />
-      Krótki opis projektu.  
-      <a href="#">Zobacz →</a>
-    </div>
+  <div class="projects-grid">
+    <a href="#" class="card">
+      <h3>Projekt 1</h3>
+      <p>Krótki opis projektu, jego funkcji i celu.</p>
+    </a>
+    <a href="#" class="card">
+      <h3>Projekt 2</h3>
+      <p>Opis drugiego projektu — elegancki i minimalistyczny.</p>
+    </a>
+    <a href="#" class="card">
+      <h3>Projekt 3</h3>
+      <p>Jeszcze jeden projekt, estetycznie zaprezentowany.</p>
+    </a>
   </div>
+</div>
 
-  <h2>Kontakt</h2>
-  <p>
-    <a href="mailto:twoj.mail@example.com">twoj.mail@example.com</a><br />
-    <a href="https://www.linkedin.com/">LinkedIn</a> •
-    <a href="https://github.com/">GitHub</a>
-  </p>
+<footer>
+  <p>Skontaktuj się: <a href="mailto:email@example.com">email@example.com</a></p>
+</footer>
 
 </body>
 </html>
+
